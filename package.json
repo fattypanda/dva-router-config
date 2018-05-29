@@ -1,4 +1,26 @@
 {
+  "name": "dva-router-config",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "author": "fattypanda <1076659852@qq.com>",
+  "license": "MIT",
+  "files": [
+    "lib/*"
+  ],
+  "keywords": [
+    "dva",
+    "dva-router",
+    "dva-router-config",
+    "dva-dynamic-router-config",
+    "router-config",
+    "dynamic-router-config"
+  ],
+  "homepage": "https://github.com/fattypanda/dva-router-config",
+  "repository": {
+    "url": "https://github.com/fattypanda/dva-router-config",
+    "type": "git"
+  },
+  "bugs": "https://github.com/fattypanda/dva-router-config/issues",
   "scripts": {
     "start": "roadhog server",
     "build": "babel src/utils/routerConfig --out-dir lib --source-maps",
