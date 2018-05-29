@@ -1,25 +1,14 @@
-import React from 'react';
-import { renderRoutes, matchRoutes } from 'react-router-config';
-import {
-  Route as ReactRoute,
-  Redirect as ReactRedirect,
-} from 'react-router';
+import Layout from './Layout';
+import Redirect from './Redirect';
+
 import dynamic from 'dva/dynamic';
-import _set from 'lodash/set';
-import _isString from 'lodash/isString';
 import _isArray from 'lodash/isArray';
-import _isFunction from 'lodash/isFunction';
 import _isBoolean from 'lodash/isBoolean';
+import _isFunction from 'lodash/isFunction';
+import _isString from 'lodash/isString';
+import _set from 'lodash/set';
 
-const Layout = (props = {}) => renderRoutes(props.route.routes);
-
-const Redirect = (props = {}) => (
-  <ReactRoute exact={props.exact} path={props.path} render={({ location = {} } = {}) => (
-    <ReactRedirect {...props} to={{...location, pathname: props.redirect }} />
-  )}/>
-);
-
-const convertRoutesConfig = (routes = [], { app = {} } = {}) => {
+export default function convertRoutesConfig (routes = [], { app = {} } = {}) {
   return routes.map((route) => {
     const { path, component, models, routes, exact, redirect } = route;
     const state = {};
@@ -50,14 +39,3 @@ const convertRoutesConfig = (routes = [], { app = {} } = {}) => {
     return state;
   });
 };
-
-const convertRoutes = (routes = [], { app = {} } = {}) => {
-  return renderRoutes(convertRoutesConfig(routes, { app }));
-}
-
-export {
-  convertRoutesConfig,
-  convertRoutes,
-  renderRoutes,
-  matchRoutes,
-}

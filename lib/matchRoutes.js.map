@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/utils/routerConfig/matchRoutes.js"],"names":["matchRoutes"],"mappings":";;;;;;AAAA;;;;;;kBAEeA,qB","file":"matchRoutes.js","sourcesContent":["import matchRoutes from 'react-router-config/matchRoutes';\n\nexport default matchRoutes;\n"]}
