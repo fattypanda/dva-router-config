@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/utils/routerConfig/renderRoutes.js"],"names":["renderRoutes"],"mappings":";;;;;;AAAA;;;;;;kBAEeA,sB","file":"renderRoutes.js","sourcesContent":["import renderRoutes from 'react-router-config/renderRoutes';\n\nexport default renderRoutes;\n"]}
