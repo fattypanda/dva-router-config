@@ -6,7 +6,7 @@ import routesConfig from './routes/Person/routes';
 function RouterConfig({ app, history }) {
   return (
     <Router history={history}>
-      {convertRoutes(routesConfig, { app })}
+      {convertRoutes(routesConfig, { app, history })}
     </Router>
   );
 }

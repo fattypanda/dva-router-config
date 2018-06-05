@@ -6,7 +6,7 @@ export default [
   },
   {
     path: '/person',
-    component: () => import('./_layout'),
+    // component: () => import('./_layout'),
     models: () => [
       import('src/models/person'),
     ],
